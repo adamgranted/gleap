@@ -4,7 +4,8 @@ app_publisher = "@adamgranted"
 app_description = "Gleap plugin for ERPNext"
 app_email = "email@domain.com"
 app_license = "mit"
-
+fixtures = ["Gleap Settings"]
+boot_session = "gleap.gleap.boot.boot_session"
 app_include_js = "public/js/gleap.js"
 
 # Apps
