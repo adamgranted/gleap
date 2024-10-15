@@ -1,2 +1,7 @@
-# erpnext_gleap
- Gleap initializer for ERPNext
+## Gleap
+
+Gleap plugin for ERPNext
+
+#### License
+
+mit
