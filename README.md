@@ -1,6 +1,6 @@
 ## Gleap
 
-Gleap plugin for ERPNext
+Gleap support agent for Frappe v15
 
 #### License
 
