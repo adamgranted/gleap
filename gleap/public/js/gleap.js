@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Retrieve the Gleap API Key and enable flag from frappe.boot
-  var gleap_api_key = frappe.boot.gleap_api_key;
-  var enable_gleap = frappe.boot.enable_gleap;
+  //   var gleap_api_key = frappe.boot.gleap_api_key;
+  //   var enable_gleap = frappe.boot.enable_gleap;
+  var gleap_api_key = "odHqL937yVjQ8j47OPi8QCWxAeKUO4i6";
+  var enable_gleap = true;
 
   if (enable_gleap && gleap_api_key) {
     // Create a new script element for Gleap
