@@ -2,7 +2,7 @@
   "doctype": "DocType",
   "name": "Gleap Settings",
   "module": "Gleap",
-  "custom": 1,
+  "custom": 0,
   "fields": [
     {
       "fieldname": "gleap_api_key",
