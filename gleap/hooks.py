@@ -6,7 +6,7 @@ app_email = "email@domain.com"
 app_license = "mit"
 fixtures = ["Gleap Settings"]
 boot_session = "gleap.boot.boot_session"
-app_include_js = "public/js/gleap.js"
+app_include_js = "assets/gleap/js/gleap.js"
 
 # Apps
 # ------------------

@@ -3,7 +3,7 @@ import frappe
 def boot_session(bootinfo):
     try:
         # Check if the 'Gleap Settings' DocType exists
-        if frappe.db.table_exists('Gleap Settings'):
+        if frappe.db.table_exists('tabGleap Settings'):
             # Fetch the Gleap Settings record
             gleap_settings = frappe.get_single("Gleap Settings")
             # Assign values to bootinfo
