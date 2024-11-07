@@ -1,3 +1,6 @@
+# Copyright (c) 2024, @adamgranted and contributors
+# For license information, please see license.txt
+
 app_name = "gleap"
 app_title = "Gleap"
 app_publisher = "@adamgranted"
@@ -6,7 +9,9 @@ app_email = "email@domain.com"
 app_license = "mit"
 fixtures = ["Gleap Settings"]
 boot_session = "gleap.boot.boot_session"
-app_include_js = "assets/gleap/js/gleap.js"
+app_include_js = [
+	"assets/gleap/js/gleap.js",
+]
 
 # Apps
 # ------------------
@@ -244,4 +249,3 @@ app_include_js = "assets/gleap/js/gleap.js"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
