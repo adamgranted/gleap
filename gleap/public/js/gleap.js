@@ -1,26 +1,88 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Retrieve the Gleap API Key and enable flag from frappe.boot
-  //   var gleap_api_key = frappe.boot.gleap_api_key;
-  //   var enable_gleap = frappe.boot.enable_gleap;
-  var gleap_api_key = "odHqL937yVjQ8j47OPi8QCWxAeKUO4i6";
-  var enable_gleap = true;
+// Copyright (c) 2024, @adamgranted and contributors
+// For license information, please see license.txt
 
-  if (enable_gleap && gleap_api_key) {
-    // Create a new script element for Gleap
-    var gleapScript = document.createElement("script");
-    gleapScript.type = "text/javascript";
-    gleapScript.async = true;
-    gleapScript.defer = true;
-    gleapScript.src = "https://app.gleap.io/assets/js/gleap.min.js"; // Replace with your Gleap script URL if different
+document.addEventListener('DOMContentLoaded', () => {
+	var gleap_api_key = frappe.boot.gleap_api_key
+	var enable_gleap = frappe.boot.enable_gleap
 
-    // Initialize Gleap once the script is loaded
-    gleapScript.onload = function () {
-      Gleap.init(gleap_api_key);
-    };
-
-    // Append the Gleap script to the <head> section
-    document.head.appendChild(gleapScript);
-  } else {
-    console.warn("Gleap Integration is disabled or API Key not set.");
-  }
-});
+	if (enable_gleap && gleap_api_key) {
+		// Don't forget to actually add the script to the document
+		!(function (Gleap, t, i) {
+			if (!(Gleap = window.Gleap = window.Gleap || []).invoked) {
+				for (
+					window.GleapActions = [],
+						Gleap.invoked = !0,
+						Gleap.methods = [
+							'identify',
+							'setEnvironment',
+							'setTags',
+							'attachCustomData',
+							'setCustomData',
+							'removeCustomData',
+							'clearCustomData',
+							'registerCustomAction',
+							'trackEvent',
+							'log',
+							'preFillForm',
+							'showSurvey',
+							'sendSilentCrashReport',
+							'startFeedbackFlow',
+							'startBot',
+							'setAppBuildNumber',
+							'setAppVersionCode',
+							'setApiUrl',
+							'setFrameUrl',
+							'isOpened',
+							'open',
+							'close',
+							'on',
+							'setLanguage',
+							'setOfflineMode',
+							'initialize',
+							'disableConsoleLogOverwrite',
+							'logEvent',
+							'hide',
+							'enableShortcuts',
+							'showFeedbackButton',
+							'destroy',
+							'getIdentity',
+							'isUserIdentified',
+							'clearIdentity',
+							'openConversations',
+							'openConversation',
+							'openHelpCenterCollection',
+							'openHelpCenterArticle',
+							'openHelpCenter',
+							'searchHelpCenter',
+							'openNewsArticle',
+							'openChecklists',
+							'startChecklist',
+							'openNews',
+							'openFeatureRequests',
+							'isLiveMode',
+						],
+						Gleap.f = function (e) {
+							return function () {
+								var t = Array.prototype.slice.call(arguments)
+								window.GleapActions.push({ e: e, a: t })
+							}
+						},
+						t = 0;
+					t < Gleap.methods.length;
+					t++
+				)
+					Gleap[(i = Gleap.methods[t])] = Gleap.f(i)
+				;(Gleap.load = function () {
+					var t = document.getElementsByTagName('head')[0],
+						i = document.createElement('script')
+					;(i.type = 'text/javascript'),
+						(i.async = !0),
+						(i.src = 'https://sdk.gleap.io/latest/index.js'),
+						t.appendChild(i)
+				}),
+					Gleap.load(),
+					Gleap.initialize(gleap_api_key)
+			}
+		})()
+	}
+})

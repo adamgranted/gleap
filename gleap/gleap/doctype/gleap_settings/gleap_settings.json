@@ -1,0 +1,50 @@
+{
+	"actions": [],
+	"autoname": "fixed",
+	"creation": "2024-11-07 15:29:53.885625",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"issingle": 1,
+	"engine": "InnoDB",
+	"field_order": ["gleap_api_key", "enable_gleap"],
+	"fields": [
+		{
+			"description": "Enter your Gleap API Key here.",
+			"fieldname": "gleap_api_key",
+			"fieldtype": "Password",
+			"in_list_view": 1,
+			"label": "Gleap API Key",
+			"reqd": 1
+		},
+		{
+			"default": "1",
+			"description": "Toggle to enable or disable Gleap support chat agent.",
+			"fieldname": "enable_gleap",
+			"fieldtype": "Check",
+			"label": "Enable Gleap Integration"
+		}
+	],
+	"links": [],
+	"modified": "2024-11-07 15:34:06.200858",
+	"modified_by": "Administrator",
+	"module": "Gleap",
+	"name": "Gleap Settings",
+	"naming_rule": "Expression (old style)",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
+}
