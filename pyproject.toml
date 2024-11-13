@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gleap"
-authors = ["@adamgranted <email@domain.com>"]
+authors = ["adamgranted <email@domain.com>"]
 description = "Gleap plugin for ERPNext"
 version =  "15.0.0"
 readme = "README.md"
